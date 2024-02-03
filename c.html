@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHCE Attendence</title>
+
+    <style>
+        body {
+            font-family: lato;
+            background-color: #FFCDD2;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .login-container {
+            font-family:lato;
+            max-width: 1000px;
+            margin: 100px auto;
+            background-color: #A52A2A ;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 25px auto;
+            background-color: powderblue;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #000000;
+            
+        }
+
+  
+.main-header {
+    font-family:lato; 
+    background-color: #DC143C; 
+    color: black;
+    padding: 20px;
+    text-align: center;
+    }
+
+
+
+
+.header-content {
+    display: flex;
+    align-items:center;
+}
+
+.header-logo{
+    width: 100px;
+    margin-right: 300px;
+    display:flex;
+}
+
+
+a.container {
+    max-width: 800px;
+    margin: 25px auto;
+    background-color: powderblue;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#attendanceMarker {
+    margin-bottom: 30px;
+}
+
+#studentsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#studentsTable th, #studentsTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.attendanceCheckbox {
+    cursor: pointer;
+}
+
+#attendanceLists {
+    display: flex;
+    justify-content: space-between;
+}
+
+#presentList, #absentList {
+    width: 48%;
+}
+
+#presentTable, #absentTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#presentTable th, #presentTable td, #absentTable th, #absentTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+button {
+    font-family:lato;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 3px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 40%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ form {
+            font-family:times new roman;
+            max-width: 400px;
+            margin: 0px auto;
+            padding: 5px;
+            background-color: #A52A2A ;
+            border-radius: 0px;
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+        }
+ label {
+            display: flex;
+            margin-bottom: 8px;
+            color: black;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 8px;
+            
+        }
+
+
+    </style>
+</head>
+
+<body>
+ <div class="login-container" id="loginPage">
+    <img src="https://gyaanarth.com/wp-content/uploads/2022/06/NHCE-LOGO-1024x1024.jpg" alt="Logo" class="header-logo">
+        <h1>NEW HORIZON COLLEGE OF ENGINEERING</h1>
+        <h2>Login to your Account</h2>
+        <form id="loginForm">
+            <label for="username"><b>Username:</b></label>
+            <input type="text" id="username" name="username" required>
+<br></br>
+
+            <label for="password"><b>Password:</b></label>
+            <input type="password" id="password" name="password" required>
+ <br></br>
+
+            <button type="button" onclick="authenticate()">Login</button>
+        </form>
+    </div>
+
+    <div class="a.container" id="mainPage" style="display: none;">
+         <header class="main-header">
+        <div class="header-content">
+            <img src="https://gyaanarth.com/wp-content/uploads/2022/06/NHCE-LOGO-1024x1024.jpg" alt="Logo" class="header-logo">
+            <h1>NEW HORIZON COLLEGE OF ENGINEERING</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1> Class III A Attendance Marker</h1>
+        <div id="attendanceMarker">
+            <h2>Mark Attendance</h2>
+            <table id="studentsTable">
+                <thead>
+                    <tr>
+                        <th><b>USN</b></th>
+                        <th><b>Student Name</b></th>
+                        <th><b>Present</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>A.M.Manikanta</td>
+                        <td><input type="checkbox" class="attendanceCheckbox"></td>
+                    </tr>
+                    <tr> 
+                         <td>002</td>
+                        <td>A.Manas Reddy</td>
+                        <td><input type="checkbox" class="attendanceCheckbox"></td>
+                    </tr>
+                   
+                     <tr> 
+                         <td>004</td>
+                        <td>Aajnya</td>
+                        <td><input type="checkbox" class="attendanceCheckbox"></td>
+                    </tr>
+
+                      <tr> 
+                         <td>005</td>
+                        <td>Aastha</td>
+                        <td><input type="checkbox" class="attendanceCheckbox"></td>
+                    </tr>
+
+                      <tr> 
+                         <td>006</td>
+                        <td>Abhinandan</td>
+                        <td><input type="checkbox" class="attendanceCheckbox"></td>
+                    </tr>
+
+                      <tr> 
+                         <td>007</td>
+                        <td>Abhishek</td>
+                        <td><input type="checkbox" class="attendanceCheckbox"></td>
+                    </tr>
+
+                     <tr> 
+                         <td>008</td>
+                        <td>Abir Ghosh</td>
+                        <td><input type="checkbox" class="attendanceCheckbox"></td>
+                    </tr>
+
+                    <tr> 
+                         <td>009</td>
+                        <td>Adarsh T</td>
+                        <td><input type="checkbox" class="attendanceCheckbox"></td>
+                    </tr>
+
+                     <tr> 
+                         <td>010</td>
+                        <td>Aditya Gopinath</td>
+                        <td><input type="checkbox" class="attendanceCheckbox"></td>
+                    </tr>
+
+                    <tr> 
+                         <td>011</td>
+                        <td>Adoni Mahammud</td>
+                        <td><input type="checkbox" class="attendanceCheckbox"></td>
+                    </tr>
+
+                     <tr> 
+                         <td>012</td>
+                        <td>Aishwarya K N</td>
+                        <td><input type="checkbox" class="attendanceCheckbox"></td>
+                    </tr>
+
+                     <tr> 
+                         <td>013</td>
+                        <td>Akash Verma</td>
+                        <td><input type="checkbox" class="attendanceCheckbox"></td>
+                    </tr>
+
+
+                    <!-- Add more rows for other students -->
+                </body>
+            </table>
+        </div>
+
+        <div id="attendanceLists">
+            <h2>Attendance Lists</h2>
+            <div id="presentList">
+                <h3>Present Students</h3>
+                <table id="presentTable">
+                    <!-- Present students will be listed here -->
+                </table>
+            </div>
+
+            <div id="absentList">
+                <h3>Absent Students</h3>
+                <table id="absentTable">
+                    <!-- Absent students will be listed here -->
+                </table>
+            </div>
+        </div>
+
+        <form id="myForm">
+            <input type="submit" value="Submit attendence">
+        </form>
+
+        <script>
+           document.addEventListener("DOMContentLoaded", function () {
+    const attendanceCheckboxes = document.querySelectorAll('.attendanceCheckbox');
+    const presentTable = document.getElementById('presentTable');
+    const absentTable = document.getElementById('absentTable');
+
+    attendanceCheckboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('change', function () {
+            updateAttendanceLists();
+        });
+    });
+
+    function updateAttendanceLists() {
+        const presentList = [];
+        const absentList = [];
+
+        attendanceCheckboxes.forEach(function (checkbox, index) {
+            const studentName = checkbox.closest('tr').querySelector('td').textContent;
+
+            if (checkbox.checked) {
+                presentList.push(studentName);
+            } else {
+                absentList.push(studentName);
+            }
+        });
+
+        displayAttendanceList(presentList, presentTable);
+        displayAttendanceList(absentList, absentTable);
+    }
+
+    function displayAttendanceList(list, table) {
+        // Clear the existing table
+        table.innerHTML = '';
+
+        // Display the updated list
+        list.forEach(function (studentName) {
+            const row = table.insertRow();
+            const cell = row.insertCell(0);
+            cell.textContent = studentName;
+        });
+    }
+});
+
+    document.getElementById("myForm").addEventListener("submit", function() {
+      alert("Submitted!!!");
+    });
+
+
+            function authenticate() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+
+                // Perform authentication (you can replace this with your actual authentication logic)
+                if (username === "dhanush" && password === "dhanu2003") {
+                    // Hide login page and show main page
+                    document.getElementById("loginPage").style.display = "none";
+                    document.getElementById("mainPage").style.display = "block";
+                } else {
+                    alert("Invalid username or password");
+                }
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>
