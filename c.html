@@ -156,28 +156,27 @@ button:hover {
     </style>
 </head>
 
-<body>
- <div class="login-container" id="loginPage">
-    <img src="https://gyaanarth.com/wp-content/uploads/2022/06/NHCE-LOGO-1024x1024.jpg" alt="Logo" class="header-logo">
-        <h1>NEW HORIZON COLLEGE OF ENGINEERING</h1>
-        <h2>Login to your Account</h2>
-        <form id="loginForm">
-            <label for="username"><b>Username:</b></label>
-            <input type="text" id="username" name="username" required>
-<br></br>
+<div class="login-container" id="loginPage">
+    <img src="nhce.png" alt="Logo" class="header-logo">
+    <h1>NEW HORIZON COLLEGE OF ENGINEERING</h1>
+    <h2>Login to your Account</h2>
+    <form id="loginForm">
+        <label for="username"><b>Username:</b></label>
+        <input type="text" id="username" name="username" required>
+        <br></br>
 
-            <label for="password"><b>Password:</b></label>
-            <input type="password" id="password" name="password" required>
- <br></br>
+        <label for="password"><b>Password:</b></label>
+        <input type="password" id="password" name="password" required>
+        <br></br>
 
-            <button type="button" onclick="authenticate()">Login</button>
-        </form>
-    </div>
+        <button type="button" onclick="authenticate()">Login</button>
+    </form>
+</div>
 
-    <div class="a.container" id="mainPage" style="display: none;">
-         <header class="main-header">
+<div class="a.container" id="mainPage" style="display: none;">
+    <header class="main-header">
         <div class="header-content">
-            <img src="https://gyaanarth.com/wp-content/uploads/2022/06/NHCE-LOGO-1024x1024.jpg" alt="Logo" class="header-logo">
+            <img src="nhce.png" alt="Logo" class="header-logo">
             <h1>NEW HORIZON COLLEGE OF ENGINEERING</h1>
         </div>
     </header>
@@ -188,87 +187,86 @@ button:hover {
             <h2>Mark Attendance</h2>
             <table id="studentsTable">
                 <thead>
-                    <tr>
-                        <th><b>USN</b></th>
-                        <th><b>Student Name</b></th>
-                        <th><b>Present</b></th>
-                    </tr>
+                <tr>
+                    <th><b>USN</b></th>
+                    <th><b>Student Name</b></th>
+                    <th><b>Present</b></th>
+                </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>001</td>
-                        <td>A.M.Manikanta</td>
-                        <td><input type="checkbox" class="attendanceCheckbox"></td>
-                    </tr>
-                    <tr> 
-                         <td>002</td>
-                        <td>A.Manas Reddy</td>
-                        <td><input type="checkbox" class="attendanceCheckbox"></td>
-                    </tr>
-                   
-                     <tr> 
-                         <td>004</td>
-                        <td>Aajnya</td>
-                        <td><input type="checkbox" class="attendanceCheckbox"></td>
-                    </tr>
+                <tr>
+                    <td>001</td>
+                    <td>A.M.Manikanta</td>
+                    <td><input type="checkbox" class="attendanceCheckbox"></td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>A.Manas Reddy</td>
+                    <td><input type="checkbox" class="attendanceCheckbox"></td>
+                </tr>
 
-                      <tr> 
-                         <td>005</td>
-                        <td>Aastha</td>
-                        <td><input type="checkbox" class="attendanceCheckbox"></td>
-                    </tr>
+                <tr>
+                    <td>004</td>
+                    <td>Aajnya</td>
+                    <td><input type="checkbox" class="attendanceCheckbox"></td>
+                </tr>
 
-                      <tr> 
-                         <td>006</td>
-                        <td>Abhinandan</td>
-                        <td><input type="checkbox" class="attendanceCheckbox"></td>
-                    </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Aastha</td>
+                    <td><input type="checkbox" class="attendanceCheckbox"></td>
+                </tr>
 
-                      <tr> 
-                         <td>007</td>
-                        <td>Abhishek</td>
-                        <td><input type="checkbox" class="attendanceCheckbox"></td>
-                    </tr>
+                <tr>
+                    <td>006</td>
+                    <td>Abhinandan</td>
+                    <td><input type="checkbox" class="attendanceCheckbox"></td>
+                </tr>
 
-                     <tr> 
-                         <td>008</td>
-                        <td>Abir Ghosh</td>
-                        <td><input type="checkbox" class="attendanceCheckbox"></td>
-                    </tr>
+                <tr>
+                    <td>007</td>
+                    <td>Abhishek</td>
+                    <td><input type="checkbox" class="attendanceCheckbox"></td>
+                </tr>
 
-                    <tr> 
-                         <td>009</td>
-                        <td>Adarsh T</td>
-                        <td><input type="checkbox" class="attendanceCheckbox"></td>
-                    </tr>
+                <tr>
+                    <td>008</td>
+                    <td>Abir Ghosh</td>
+                    <td><input type="checkbox" class="attendanceCheckbox"></td>
+                </tr>
 
-                     <tr> 
-                         <td>010</td>
-                        <td>Aditya Gopinath</td>
-                        <td><input type="checkbox" class="attendanceCheckbox"></td>
-                    </tr>
+                <tr>
+                    <td>009</td>
+                    <td>Adarsh T</td>
+                    <td><input type="checkbox" class="attendanceCheckbox"></td>
+                </tr>
 
-                    <tr> 
-                         <td>011</td>
-                        <td>Adoni Mahammud</td>
-                        <td><input type="checkbox" class="attendanceCheckbox"></td>
-                    </tr>
+                <tr>
+                    <td>010</td>
+                    <td>Aditya Gopinath</td>
+                    <td><input type="checkbox" class="attendanceCheckbox"></td>
+                </tr>
 
-                     <tr> 
-                         <td>012</td>
-                        <td>Aishwarya K N</td>
-                        <td><input type="checkbox" class="attendanceCheckbox"></td>
-                    </tr>
+                <tr>
+                    <td>011</td>
+                    <td>Adoni Mahammud</td>
+                    <td><input type="checkbox" class="attendanceCheckbox"></td>
+                </tr>
 
-                     <tr> 
-                         <td>013</td>
-                        <td>Akash Verma</td>
-                        <td><input type="checkbox" class="attendanceCheckbox"></td>
-                    </tr>
+                <tr>
+                    <td>012</td>
+                    <td>Aishwarya K N</td>
+                    <td><input type="checkbox" class="attendanceCheckbox"></td>
+                </tr>
+
+                <tr>
+                    <td>013</td>
+                    <td>Akash Verma</td>
+                    <td><input type="checkbox" class="attendanceCheckbox"></td>
+                </tr>
 
 
-                    <!-- Add more rows for other students -->
-                </body>
+                <!-- Add more rows for other students -->
             </table>
         </div>
 
@@ -357,6 +355,6 @@ button:hover {
         </script>
     </div>
 
-</body>
+</div>
 
 </html>
